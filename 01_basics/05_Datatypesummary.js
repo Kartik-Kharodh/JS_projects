@@ -35,3 +35,32 @@ const myFunc = function(){
 
 myFunc()
 console.log(typeof id) // its datatype is Symbol
+
+//*****************************************************************************************
+
+//Stack vs Heap
+
+//when we talk about Primitive datatypes stack is used 
+// and Heap is used for Non-Primitive datatypes
+
+
+let userone = "Kartik Kharodh"
+let usertwo = userone
+usertwo = "Kharodh Kartik"
+console.log(userone);
+console.log(usertwo);
+// since in above usertwo variable copy of userone is passed therefore changes in usertwo will not
+// be applied tot userone
+
+let obj1 = 
+{
+    email:"Kartikkharodh@gamil.com",
+    mobile :1234
+}
+
+let obj2 = obj1
+obj2.email = "Rajnikant@gmail.com"
+console.log(obj1.email)
+console.log(obj2.email)
+//since heap memory is used my the object therefore its reference has been passed to obj2 and hence
+//changes in obj2 has been shown to obj1 
